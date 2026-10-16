@@ -66,4 +66,4 @@ Tarefa cadastrada com sucesso!
 
 
 
-[Seu Nome Completo] — [Seu curso] — Bootcamp II
+Sara Menezes Macedo — Ciência de dados — Bootcamp II
