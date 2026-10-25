@@ -1,9 +1,7 @@
-# bootcamp-2
-
 # TaskTracker
 
-Aplicação de linha de comando (CLI) em Python para gerenciar tarefas do dia a dia.
-Projeto cumulativo do **Bootcamp II** — Fase 2 (Entrega Intermediária).
+Aplicação de linha de comando (CLI) em Python para gerenciar tarefas do dia a dia, agora **empacotada com Docker** e executável via **Docker Compose**.
+Projeto cumulativo do **Bootcamp II** — Fase 3 (Entrega Final).
 
 ## Descrição funcional
 
@@ -22,30 +20,59 @@ O TaskTracker permite:
 
 ## Tecnologias
 
-- Python 3
+- Python 3.11
+- Docker e Docker Compose
 - Git e GitHub
 
 ## Estrutura do repositório
 
 ```
 tasktracker-projeto/
-├── README.md
 ├── .gitignore
 ├── docs/
 │   └── planejamento_logico.pdf
-└── src/
-    └── main.py
+├── src/
+│   └── main.py
+├── Dockerfile
+├── docker-compose.yml
+└── README.md
 ```
 
-## Instalação e execução
+## Guia Docker
+
+**Pré-requisito:** [Docker](https://docs.docker.com/get-docker/) instalado (com o plugin Docker Compose).
+
+Clone o repositório e entre na pasta:
+
+```bash
+git clone https://github.com/sara.mmacedo@sempreceub.com/tasktracker-projeto.git
+cd tasktracker-projeto
+```
+
+### Como construir a imagem:
+
+```bash
+docker build -t tasktracker-app .
+```
+
+### Como rodar o container em modo isolado:
+
+```bash
+docker run -it --rm tasktracker-app
+```
+
+### Como rodar via orquestração (Recomendado):
+
+```bash
+docker compose run --rm tasktracker
+```
+
+> O `docker-compose.yml` usa `stdin_open: true` e `tty: true` para manter o canal de entrada aberto e alocar um terminal virtual, permitindo o uso do `input()` da CLI dentro do container.
+
+## Execução sem Docker (opcional)
 
 1. Instale o [Python 3](https://www.python.org/downloads/).
-2. Clone o repositório:
-   ```bash
-   git clone https://github.com/SEU-USUARIO/tasktracker-projeto.git
-   cd tasktracker-projeto
-   ```
-3. Execute a aplicação:
+2. Execute a aplicação:
    ```bash
    python src/main.py
    ```
@@ -64,6 +91,6 @@ Título da tarefa: Estudar para a prova de Lógica
 Tarefa cadastrada com sucesso!
 ```
 
+## Autora
 
-
-Sara Menezes Macedo — Ciência de dados — Bootcamp II
+Sara Menezes Macedo — Ciência de Dados — Bootcamp II
