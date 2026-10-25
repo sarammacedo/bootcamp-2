@@ -45,8 +45,8 @@ tasktracker-projeto/
 Clone o repositório e entre na pasta:
 
 ```bash
-git clone https://github.com/sarammacedo/tasktracker-projeto.git
-cd tasktracker-projeto
+git clone https://github.com/sarammacedo/bootcamp-2.git
+cd bootcamp-2
 ```
 
 ### Como construir a imagem:
